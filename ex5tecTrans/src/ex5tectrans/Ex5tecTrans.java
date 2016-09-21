@@ -7,7 +7,9 @@ package ex5tectrans;
 
 /**
  *
- * @author 13180606
+ * @author Daniel Machado
+ * @author Eduardo Mallmann
+ * 
  */
 public class Ex5tecTrans {
 
