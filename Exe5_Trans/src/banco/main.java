@@ -52,8 +52,8 @@ public class main {
         System.out.println();
         System.out.println("Listando conta com PID = 1:");
         try {
-            ContaDTO instrumento = dao.buscarPorNumero(1);
-            System.out.println(instrumento.toString());
+            ContaDTO conta = dao.buscarPorNumero(1);
+            System.out.println(conta.toString());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

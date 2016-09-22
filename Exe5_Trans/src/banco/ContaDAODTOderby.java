@@ -57,8 +57,9 @@ public class ContaDAODTOderby implements ContaDAO {
     public ContaDTO buscarPorNumero(int pid) throws Exception {
         ContaDTO conta = null;
         try (Connection conexao = StartDBDataSource.conectarBd()) {
-            String sql = "select * from CONTAS where NUMERO = '?'";
+            String sql = "select * from CONTAS where NUMERO = ?";
             try (PreparedStatement comando = conexao.prepareStatement(sql)) {
+                comando.setInt(1, pid);
                 try (ResultSet resultados = comando.executeQuery()) {
                     resultados.next();
                     conta = new ContaDTO(
